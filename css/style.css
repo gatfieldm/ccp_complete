@@ -373,8 +373,64 @@ Did you include media queries to ensure that any gifs or other animation are not
 }
 
 @media (min-width: 1000px){
-
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
     
+    nav {
+        width: 100%;
+        position: static;
+        justify-content: center;
+    }
+    nav ul {
+        width: 100%;
+        position: static;
+    }
+    header {
+        width: 100%;
+        position: static;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    
+    }
+    
+    .grid-gallery {
+        all: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        img{
+            max-width: 100%;
+        
+        }
+        border: dashed 3px black;
+        padding: 10px;
+    }
+
+    .grid-gallery-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .center-image{
+        width: 30%;
+        height: 30%;
+        border: dashed 6px black;
+        max-height: none;
+    }
+
+
+
+
 }
         
     
