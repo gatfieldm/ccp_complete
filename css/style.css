@@ -487,14 +487,13 @@ Did you include media queries to ensure that any gifs or other animation are not
     }
 
     .grid-gallery-3f{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
+        border: dashed 2px black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+      }
 
-        img {
-            max-width: 100%;
-        }
-    }
+    
     .center-image{
         min-width: 50%;
     }
