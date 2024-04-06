@@ -429,7 +429,10 @@ Did you include media queries to ensure that any gifs or other animation are not
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
-
+        img{
+            max-width: 100%;
+        
+        }
         border: dashed 3px black;
         padding: 10px;
     }
@@ -465,7 +468,9 @@ Did you include media queries to ensure that any gifs or other animation are not
             -webkit-text-stroke: 1px black;
             
         }
-
+        img {
+            max-width: 200%;
+        }
     }
 
     .grid-travel-title{
