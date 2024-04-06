@@ -460,14 +460,14 @@ Did you include media queries to ensure that any gifs or other animation are not
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: center;
-        p{
+        /* p{
             font-style: oblique;
             font-weight: 500;
-            color: white;
+            color: orangered;
             font-size: 20px;
             -webkit-text-stroke: 1px black;
             
-        }
+        } */
         img {
             max-width: 200%;
         }
