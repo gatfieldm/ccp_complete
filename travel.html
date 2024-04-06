@@ -51,7 +51,12 @@
 		<div class = "fav">
 			<a href="javascript:void(0);" onclick="addToFavorites('https://gatfieldm.github.io/ccp_tablet_w24/', 'Gatfield Gallery');">Add to Favorites</a>
 		</div>
+
+
 				<h1>Travel Locations</h1>
+				<div class="bar-box">
+					<div class="bar" id="progBar"></div>
+				</div>
 				<div>
 					<h2>Grand Canyon National Park</h2>
 					<div class = "grid-travel-title">
@@ -130,39 +135,58 @@
 
 				<div>
 					<h2>Niagara Falls</h2>
-					<div class = "grid-travel-title">
-						<img class="col" src="images/Niagara_Falls_gif.gif" alt = "">
-						<img class ="col" src="images/Niagara_Falls_jpg.jpg" alt = "">
+
+					<div class="grid-travel-title">
+						<img class="col" src="images/Niagara_Falls_gif.gif" alt="" onclick="openImageInNewWindow(this.src)">
+						<img class="col" src="images/Niagara_Falls_jpg.jpg" alt="" onclick="openImageInNewWindow(this.src)">
 					</div>
 					<h3><strong>Geographical Location</strong>: North America</h3>
-
+				
 					<p>Niagara Falls is located on the border between Canada and the United States. Connecting Lake Erie and Lake Ontario, Niagara Falls has the highest flow rate of any waterfall in North America.
-					</p> 
+					</p>
 					<p>Niagara Falls draws in thousands of visitors every year, and for good reason. As such, there are numerous things that you can see while you visit the falls, and it is very easy to make a full trip out of seeing this wonderful sight.
 					</p>
 					<h3>Photo Gallery</h3>
-					<div class = "Niagara-div">
-						<img class = "Niagara" src="images/Niagara_Falls_2.jpg" alt = "A visualization of the 'Horseshoe' part of the falls">
-						<p>The 'Horseshoe' </p>
-
-						<img class = "Niagara" src="images/Niagara_Falls_Rainbow.jpg" alt="Niagara Falls with a rainbow touching down in it">
+					<div class="Niagara-div" id="enlarged-container">
+						<img class="Niagara" src="images/Niagara_Falls_2.jpg" alt="A visualization of the 'Horseshoe' part of the falls" onclick="newWindow(this.src)">
+						<p>The 'Horseshoe'</p>
+				
+						<img class="Niagara" src="images/Niagara_Falls_Rainbow.jpg" alt="Niagara Falls with a rainbow touching down in it" onclick="newWindow(this.src)">
 						<p>A rainbow in Niagara Falls</p>
-
-						<img class = "Niagara" src="images/Niagara_Falls_Sunset.jpg" alt="An orange sky overlooking Niagara Falls">
+				
+						<img class="Niagara" src="images/Niagara_Falls_Sunset.jpg" alt="An orange sky overlooking Niagara Falls" onclick="newWindow(this.src)">
 						<p>A sunset at Niagara Falls</p>
-
-						<img class = "Niagara" src="images/Niagara_Falls_Colorful.jpg" alt = "Niagara Falls illuminated with colored lights">
+				
+						<img class="Niagara" src="images/Niagara_Falls_Colorful.jpg" alt="Niagara Falls illuminated with colored lights" onclick="newWindow(this.src)">
 						<p>A colorful view of Niagara Falls</p>
-						
-						<img class = "Niagara" src ="images/Niagara_Falls_Zoom-Out.jpg" alt = "Niagara Falls from a distant perspective">
+				
+						<img class="Niagara" src="images/Niagara_Falls_Zoom-Out.jpg" alt="Niagara Falls from a distant perspective" onclick="newWindow(this.src)">
 						<p>A distant look at Niagara Falls</p>
 					</div>
 					<h3>Contributors</h3>
 					<ul>
 						<li>Mason Gatfield</li>
 					</ul>
-				</div>
-			
+				</div>	
+	<script>
+		function newWindow(imageSrc) {
+			window.open(imageSrc, "_blank");
+		}
+	</script>
+	<script>
+		
+
+	var progressBar = document.getElementById("progBar");
+
+	function moveBar() {
+		var scrollTop = window.scrollY || document.documentElement.scrollTop;
+		var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		var scrolled = (scrollTop / scrollHeight) * 100;
+		progressBar.style.width = scrolled + "%";
+	}
+
+	window.addEventListener("scroll", moveBar);
+	</script>		
 
     </main>
     <footer>

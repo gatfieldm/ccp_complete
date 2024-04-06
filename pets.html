@@ -48,8 +48,11 @@
         <div class = "fav">
             <a href="javascript:void(0);" onclick="addToFavorites('https://gatfieldm.github.io/ccp_tablet_w24/', 'Gatfield Gallery');">Add to Favorites</a>
         </div>
+        <div class="bar-box">
+            <div class="bar" id="progBar"></div>
+        </div>
         <h1>Pets</h1>
-        
+
         <div class="Bacon">
             <h2>Bacon Q Dog</h2>
 
@@ -128,6 +131,22 @@
         </div>
 
     </main>
+
+    <script>
+		
+
+        var progressBar = document.getElementById("progBar");
+    
+        function moveBar() {
+            var scrollTop = window.scrollY || document.documentElement.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = scrolled + "%";
+        }
+    
+        window.addEventListener("scroll", moveBar);
+        </script>	
+        
     <footer>
         <p>Mason Gatfield &copy; 2024</p>
     </footer>
